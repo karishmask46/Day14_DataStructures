@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day14_DataStructures
 {
-    internal class UC_3AppendNode
+    internal class UC4_InsertBwTwoNumbers
     {
         internal Node head; //new 
         internal void Add(int data)
@@ -26,7 +26,24 @@ namespace Day14_DataStructures
             }
             Console.WriteLine("{0} inserted into the linked list", node.data);
         }
+        internal Node InsertAtParticularPosition(int position, int data)
+        {
+            Node temp = head;
 
+            for (int k = 0; k < position - 1; k++)
+
+                temp = temp.next;
+
+            Node aft = temp.next;
+
+            Node vtx = new Node(data);
+
+           vtx.next =  aft;
+
+            temp.next = vtx;
+            return head;
+        }
+       
         internal void Display()
         {
             Node temp = this.head;
