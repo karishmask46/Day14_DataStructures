@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day14_DataStructures
 {
-    internal class UC5_RemoveFirstNode
+    internal class UC6_RemoveLastNode
     {
         internal Node head; //new 
         internal void Add(int data)
@@ -50,7 +50,20 @@ namespace Day14_DataStructures
             this.head = this.head.next;
             return this.head;
         }
-
+        internal Node RemovaLastNode()
+        {
+            if (head == null)
+                return null;
+            if (head.next == null)
+                return null;
+            Node newNode = head;
+            while (newNode.next.next != null)
+            {
+                newNode = newNode.next;
+            }
+            newNode.next = null;
+            return head;
+        }
 
         internal void Display()
         {
