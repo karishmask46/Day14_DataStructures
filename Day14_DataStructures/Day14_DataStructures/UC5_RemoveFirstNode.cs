@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day14_DataStructures
 {
-    internal class UC4_InsertBwTwoNumbers
+    internal class UC5_RemoveFirstNode
     {
         internal Node head; //new 
         internal void Add(int data)
@@ -43,7 +43,15 @@ namespace Day14_DataStructures
             temp.next = vtx;
             return head;
         }
-       
+        internal Node RemoveFirstNode()
+        {
+            if (this.head == null)
+                return null;
+            this.head = this.head.next;
+            return this.head;
+        }
+
+
         internal void Display()
         {
             Node temp = this.head;
