@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day14_DataStructures
 {
-    internal class UC2_ChangeListData
+    internal class UC_3AppendNode
     {
         internal Node head; //new 
         internal void Add(int data)
@@ -16,13 +16,13 @@ namespace Day14_DataStructures
                 this.head = node;
             else
             {
-                node.next  = head;
-                head = node;
-                //while (temp.next != null)
-                //{
-                //    temp = temp.next;
-                //}
-                //temp.next = node;
+                Node temp  = head;
+
+                while (temp.next != null)
+                {
+                    temp = temp.next;
+                }
+                temp.next = node;
             }
             Console.WriteLine("{0} inserted into the linked list", node.data);
         }
