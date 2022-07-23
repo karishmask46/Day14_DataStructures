@@ -1,7 +1,7 @@
 ﻿using Day14_DataStructures;
 Console.WriteLine("Hello World!");
-UC1_CreatingLinkedList list = new UC1_CreatingLinkedList();
-list.Add(56);
-list.Add(30);
+UC2_ChangeListData list = new UC2_ChangeListData();
 list.Add(70);
+list.Add(30);
+list.Add(56);
 list.Display();
