@@ -1,12 +1,13 @@
 ﻿using Day14_DataStructures;
 Console.WriteLine("Welcome To the Dat Structures Linked list");
-UC7_SearchNode list = new UC7_SearchNode();
+UC9_RemovingData list = new UC9_RemovingData();
 list.Add(56);
 list.Add(30);
 list.Add(70);
+Node insertData = new Node(40);
+list.InsertAtParticularPosition(30, insertData);
+Console.Write("After insert 40 after 30 in Linked List \nLinked List : ");
 list.Display();
-Console.WriteLine();
-Node node = new Node(40);
-list.InsertAtParticularPosition(30, node);
-Console.Write("\n After Inserted 40 in b/w 30 and 70 :\n Linked List : ");
+list.RemovaAtParticularNode(40);
+Console.Write("\n\nAfter remove 40 from Linked List \nLinked List : ");
 list.Display();

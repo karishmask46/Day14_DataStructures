@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day14_DataStructures
 {
-    internal class UC7_SearchNode
+    internal class UC9_RemovingData
     {
         internal Node head; //new 
         internal void Add(int data)
@@ -37,6 +37,20 @@ namespace Day14_DataStructures
                     temp.next = Newdata;
                     temp.next.next = newnode;
                     break;
+                }
+                temp = temp.next;
+            }
+            return head;
+        }
+        internal Node RemovaAtParticularNode(int DeleteNode)
+        {
+            Node temp = this.head;
+            while (temp != null)
+            {
+                while (temp.next.data == DeleteNode)
+                {
+                    temp.next = temp.next.next;
+                    return head;
                 }
                 temp = temp.next;
             }
