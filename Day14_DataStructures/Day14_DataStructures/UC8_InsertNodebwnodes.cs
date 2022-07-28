@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day14_DataStructures
 {
-    internal class UC7_SearchNode
+    internal class UC8_InsertNodebwnodes
     {
         internal Node head; //new 
         internal void Add(int data)
