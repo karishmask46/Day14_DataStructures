@@ -1,10 +1,9 @@
 ﻿using Day14_DataStructures;
-Console.WriteLine("Hello World!");
-UC6_RemoveLastNode list = new UC6_RemoveLastNode();
+Console.WriteLine("Welcome To the Dat Structures Linked list");
+UC7_SearchNode list = new UC7_SearchNode();
 list.Add(56);
 list.Add(30);
 list.Add(70);
-//list.InsertAtParticularPosition(1,30);
-//list.RemoveFirstNode();
-list.RemovaLastNode();
-list.Display();
+Console.WriteLine("enter the data which you want to search in Linked List ");
+int data = int.Parse(Console.ReadLine());
+Console.WriteLine(list.Search(data));

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day14_DataStructures
 {
-    internal class UC6_RemoveLastNode
+    internal class UC7_SearchNode
     {
         internal Node head; //new 
         internal void Add(int data)
@@ -26,43 +26,24 @@ namespace Day14_DataStructures
             }
             Console.WriteLine("{0} inserted into the linked list", node.data);
         }
-        internal Node InsertAtParticularPosition(int position, int data)
+        
+        
+        
+        internal string Search(int value)
         {
-            Node temp = head;
 
-            for (int k = 0; k < position - 1; k++)
-
-                temp = temp.next;
-
-            Node aft = temp.next;
-
-            Node vtx = new Node(data);
-
-           vtx.next =  aft;
-
-            temp.next = vtx;
-            return head;
-        }
-        internal Node RemoveFirstNode()
-        {
-            if (this.head == null)
-                return null;
-            this.head = this.head.next;
-            return this.head;
-        }
-        internal Node RemovaLastNode()
-        {
-            if (head == null)
-                return null;
-            if (head.next == null)
-                return null;
-            Node newNode = head;
-            while (newNode.next.next != null)
+            while (this.head != null)
             {
-                newNode = newNode.next;
+                if (this.head.data == value)
+                {
+                    return $"the given data {value} is Presrent in Linked List";
+                }
+                this.head = this.head.next;
+
             }
-            newNode.next = null;
-            return head;
+            return null;
+            Console.WriteLine(value);
+
         }
 
         internal void Display()
